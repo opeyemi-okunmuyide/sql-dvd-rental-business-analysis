@@ -25,8 +25,6 @@ It demonstrates techniques including:
 ===========================================================
 */
 
-use mavenmovies;
-
 /*
 -----------------------------------------------------------
 SECTION 1 - BUSINESS & STORE OVERVIEW
@@ -103,10 +101,14 @@ SELECT
     city.city,
     country.country
 FROM store
-	LEFT JOIN staff ON store.manager_staff_id = staff.staff_id
-	LEFT JOIN address ON store.address_id = address.address_id
-    LEFT JOIN city ON address.city_id = city.city_id
-    LEFT JOIN country ON city.country_id = country.country_id;
+	LEFT JOIN staff 
+		ON store.manager_staff_id = staff.staff_id
+	LEFT JOIN address 
+		ON store.address_id = address.address_id
+    LEFT JOIN city 
+		ON address.city_id = city.city_id
+    LEFT JOIN country 
+		ON city.country_id = country.country_id;
     
 /*
 -----------------------------------------------------------
@@ -158,7 +160,8 @@ SELECT
     film.rental_rate,
     film.replacement_cost
 FROM inventory
-    LEFT JOIN film ON inventory.film_id = film.film_id;
+    LEFT JOIN film 
+		ON inventory.film_id = film.film_id;
     
 /*---------------------------------------------------------
 Analysis 2.4: Inventory Distribution by Rating
@@ -173,7 +176,8 @@ SELECT
     film.rating,
 	COUNT(inventory_id) AS number_of_inventory
 FROM inventory
-    LEFT JOIN film ON inventory.film_id = film.film_id
+    LEFT JOIN film 
+		ON inventory.film_id = film.film_id
 GROUP BY 
 	inventory.store_id,
     film.rating;
