@@ -27,6 +27,16 @@ The goal of this analysis was to extract meaningful insights from relational dat
 ### 5. Market Analysis
 - Explored trends within the rental database to identify business opportunities
 
+## Project Screenshots
+
+### Inventory Analysis
+![Inventory Analysis](Images/inventory_analysis.png)
+![Inventory Analysis](Images/inventory_rating_analysis.png)
+![Inventory Analysis](Images/inventory_category_analysis.png)
+
+### Customer Analysis
+![Customer Revenue Analysis](Images/customer_details_analysis.png)
+
 ## Skills Demonstrated
 - Complex SQL queries
 - Data aggregation
